@@ -7,11 +7,7 @@
   <link rel="stylesheet" href="stylesheets/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#draggable" ).draggable({ containment: "#window" });
-  } );
-  </script>
+
   <title>POLIVE</title>
   <style media="screen">
     /* body::before {
@@ -25,7 +21,7 @@
       height: 3600px;
     } */
     </style>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
     $(document).ready(function() {
       $(".move-area").mousemove(function(event) {
       let eye = $(".eye");
@@ -41,6 +37,11 @@
           });
         });
       })
+    </script> -->
+    <script>
+    $( function() {
+      $( "#draggable" ).draggable({ containment: "#window" });
+    } );
     </script>
 </head>
 <body>
@@ -302,8 +303,6 @@
         <div class="number_6">
           <h1>6</h1>
         </div>
-        <section class="move-area">
-          <div class='container'>
         <img class="eye_1"src="images/Vector 379.svg" alt="">
         <img class="eye_2"src="images/eye2.svg" alt="">
         <img class="eye_3"src="images/eye3.svg" alt="">
@@ -335,8 +334,6 @@
         <div class="pupil_10">
         </div>
         </div>
-        </section>
-      </div>
       <div class="pattern_blue">
         <div class="line_1">
         </div>
