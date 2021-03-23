@@ -31,7 +31,13 @@ content: " ";
 }
 
  .ui-widget-content {
-   top: 25%;
+   background: url("../images/24.svg");
+   width: 10vw;
+   height: 10vw;
+   background-size: 100% auto;
+   position: absolute;
+   top: 31.5%;
+   left: 5.5%;
  }
 .textline_1 {
   width: 100%;
