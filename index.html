@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable({ containment: "#window" });
+  } );
+  </script>
+  <title>POLIVE</title>
+  <style media="screen">
+    /* body::before {
+      content: '';
+      background: url('images/d2.png');
+      opacity: .1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3600px;
+    } */
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $(".move-area").mousemove(function(event) {
+      let eye = $(".eye");
+      let x = (eye.offset().left) + (eye.width() / 2);
+      let y = (eye.offset().top) + (eye.height() / 2);
+      let rad = Math.atan2(event.pageX - x, event.pageY - y);
+      let rot = (rad * (180 / Math.PI) * -1) + 180;
+      eye.css ({
+        '-webkit-transform': 'rotate(' + rot + 'deg)',
+        '-moz-transform': 'rotate(' + rot + 'deg)',
+        '-ms-transform': 'rotate(' + rot + 'deg)',
+        'transform': 'rotate(' + rot + 'deg)'
+          });
+        });
+      })
+    </script>
+</head>
+<body>
+  <div class="all">
+  <div class="list">
+    <div class="header">
+      <div class="tapes">
+        <img class="t1"src="images/1.svg" alt="">
+        <img class="t2"src="images/2.svg" alt="">
+        <img class="t3"src="images/3.svg" alt="">
+        <img class="t4"src="images/4.svg" alt="">
+        <img class="t5"src="images/5.svg" alt="">
+        <img class="t8"src="images/8.svg" alt="">
+        <div class="t6">
+        </div>
+        <img class="t7"src="images/7.svg" alt="">
+        <img class="t9"src="images/9.svg" alt="">
+        <!-- <div class="marquee">
+          <p>POLIVE POLIVE POLIVE POLIVE POLIVE POLIVE</p>
+        </div> -->
+        <div class="textline_1">
+          <div class="row">
+            <p>POLIVE POLIVE POLIVE POLIVE POLIVE POLIVE </p>
+          </div>
+        </div>
+          <div class="textline_2">
+            <div class="row_2">
+            <p>POLIVE POLIVE POLIVE POLIVE POLIVE POLIVE </p>
+          </div>
+        </div>
+          <div class="textline_3">
+            <div class="row">
+            <p>POLIVE POLIVE POLIVE POLIVE POLIVE POLIVE </p>
+          </div>
+        </div>
+      </div>
+      <div class="water">
+        <div class="circle">
+        </div>
+        <div class="circle2">
+        </div>
+        <div class="circle3">
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="plants">
+        <div class="number_1">
+          <h1>1</h1>
+        </div>
+        <img class="p1"src="images/10.svg" alt="">
+        <img class="p2"src="images/11.svg" alt="">
+        <img class="p3"src="images/12.svg" alt="">
+        <img class="p4"src="images/13.svg" alt="">
+        <img class="p5"src="images/14.svg" alt="">
+        <img class="p6"src="images/15.svg" alt="">
+        <img class="p7"src="images/16.svg" alt="">
+        <img class="p8"src="images/17.svg" alt="">
+        <img class="p9"src="images/18.svg" alt="">
+        <img class="p10"src="images/19.svg" alt="">
+        <img class="p11"src="images/20.svg" alt="">
+      </div>
+      <div class="right">
+      <div class="random">
+        <div class="square s_1">
+        </div>
+        <div class="square s_2">
+        </div>
+        <div class="square s_3">
+        </div>
+        <div class="square s_4">
+        </div>
+        <div class="square s_5">
+        </div>
+        <div class="square s_6">
+        </div>
+        <div class="square s_7">
+        </div>
+        <div class="square s_8">
+        </div>
+        <div class="square s_9">
+        </div>
+        <div class="square s_10">
+        </div>
+        <div class="square s_11">
+        </div>
+        <div class="square s_12">
+        </div>
+        <div class="square s_13">
+        </div>
+        <div class="square s_14">
+        </div>
+        <div class="square s_15">
+        </div>
+        <div class="square s_16">
+        </div>
+        <div class="square s_17">
+        </div>
+        <div class="square s_18">
+        </div>
+        <div class="square s_19">
+        </div>
+        <div class="square s_20">
+        </div>
+        <div class="square s_21">
+        </div>
+        <div class="square s_22">
+        </div>
+        <div class="square s_23">
+        </div>
+        <div class="square s_24">
+        </div>
+        <div class="square s_25">
+        </div>
+        <div class="square s_26">
+        </div>
+        <div class="square s_27">
+        </div>
+      </div>
+      <div class="right_block">
+      <div class="head">
+      <div class="pattern_green">
+        <img class=""src="images/21.svg" alt="">
+      </div>
+      <div class="value">
+        <h1>150мл / 20°С</h1>
+      </div>
+      </div>
+      <div class="bottom">
+      <div class="grid">
+        <img class="l_1"src="images/line.svg" alt="">
+        <img class="l_2"src="images/line.svg" alt="">
+        <img class="l_3"src="images/line.svg" alt="">
+        <img class="l_4"src="images/line.svg" alt="">
+        <img class="l_5"src="images/line.svg" alt="">
+        <img class="l_6"src="images/line.svg" alt="">
+      </div>
+      <div class="number2">
+        <div class="number_2">
+          <h1>2</h1>
+        </div>
+      <div class="plant">
+        <img src="images/22.svg" alt="">
+      </div>
+      <div class="pattern_black">
+        <img src="images/23.svg" alt="">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="list">
+    <div class="header_2">
+      <div class="number3">
+        <div class="rain">
+          <div class="number_3">
+            <h1>3</h1>
+          </div>
+          <div class="drop1">
+          </div>
+          <div class="drop2">
+          </div>
+          <div class="drop3">
+          </div>
+          <div class="drop4">
+          </div>
+          <div class="drop5">
+          </div>
+          <div class="drop6">
+          </div>
+          <div class="drop7">
+          </div>
+          <div class="drop8">
+          </div>
+          <div class="drop9">
+          </div>
+          <div class="drop10">
+          </div>
+          <div class="drop11">
+          </div>
+          <div class="drop12">
+          </div>
+          <div class="drop13">
+          </div>
+          <div class="drop14">
+          </div>
+          <div class="drop15">
+          </div>
+          <div class="drop16">
+          </div>
+          <div class="drop17">
+          </div>
+          <div class="drop18">
+          </div>
+          <div class="drop19">
+          </div>
+          <div class="drop20">
+          </div>
+          <div class="drop21">
+          </div>
+          <div class="drop22">
+          </div>
+          <div class="drop23">
+          </div>
+          <div class="drop24">
+          </div>
+          <div class="drop25">
+          </div>
+          <div class="drop26">
+          </div>
+          <div class="drop27">
+          </div>
+          <div class="drop28">
+          </div>
+        </div>
+        <div class="pattern_black2">
+          <img src="images/pattern.svg" alt="">
+        </div>
+      </div>
+      <div id= "window"class="number4">
+        <div class="number_4">
+          <h1>4</h1>
+        </div>
+        <div id="draggable" class="ui-widget-content">
+         <img class="flower_1"src="images/24.svg" alt="">
+         </div>
+         <img class="flower_2"src="images/25.svg" alt="">
+         <img class="flower_3"src="images/26.svg" alt="">
+         <img class="flower_4"src="images/27.svg" alt="">
+         <img class="flower_5"src="images/32.svg" alt="">
+         <img class="flower_6"src="images/33.svg" alt="">
+         <img class="vase_1"src="images/28.svg" alt="">
+         <img class="vase_2"src="images/29.svg" alt="">
+         <img class="vase_3"src="images/30.svg" alt="">
+         <img class="vase_4"src="images/31.svg" alt="">
+         <img class="vase_5"src="images/34.svg" alt="">
+
+      </div>
+    </div>
+    <div class="main_2">
+      <div class="number5">
+        <div class="lamps">
+          <div class="number_5">
+            <h1>5</h1>
+          </div>
+          <div class="lamp_1">
+          </div>
+          <div class="lamp_2">
+          </div>
+        </div>
+        <div class="value_2">
+          <h1>55.7518° N 35.6173° E</h1>
+        </div>
+      </div>
+      <div class="right_b">
+      <div class="number6">
+        <div class="number_6">
+          <h1>6</h1>
+        </div>
+        <section class="move-area">
+          <div class='container'>
+        <img class="eye_1"src="images/Vector 379.svg" alt="">
+        <img class="eye_2"src="images/eye2.svg" alt="">
+        <img class="eye_3"src="images/eye3.svg" alt="">
+        <img class="eye_4"src="images/eye4.svg" alt="">
+        <img class="eye_5"src="images/eye5.svg" alt="">
+        <img class="eye_6"src="images/eye6.svg" alt="">
+        <img class="eye_7"src="images/eye7.svg" alt="">
+        <img class="eye_8"src="images/eye8.svg" alt="">
+        <img class="eye_9"src="images/eye9.svg" alt="">
+        <img class="eye_10"src="images/eye10.svg" alt="">
+        <div class="pupil_1">
+        </div>
+        <div class="eye pupil_2">
+        </div>
+        <div class="pupil_3">
+        </div>
+        <div class="pupil_4">
+        </div>
+        <div class="pupil_5">
+        </div>
+        <div class="pupil_6">
+        </div>
+        <div class="pupil_7">
+        </div>
+        <div class="pupil_8">
+        </div>
+        <div class="pupil_9">
+        </div>
+        <div class="pupil_10">
+        </div>
+        </div>
+        </section>
+      </div>
+      <div class="pattern_blue">
+        <div class="line_1">
+        </div>
+        <div class="line_2">
+        </div>
+        <div class="line_3">
+        </div>
+        <div class="line_4">
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  <div class="list">
+    <div class="header_3">
+      <div class="number7">
+        <div class="pattern_green2">
+          <img class="pg"src="images/35.svg" alt="">
+        </div>
+        <div class="bacteria">
+          <div class="number_7">
+            <h1>7</h1>
+          </div>
+          <img class="bb_1"src="images/59.svg" alt="">
+          <img class="bb_2"src="images/66.svg" alt="">
+          <img class="bb_3"src="images/67.svg" alt="">
+          <img class="bb_4"src="images/68.svg" alt="">
+          <img class="bb_5"src="images/69.svg" alt="">
+          <img class="bb_6"src="images/70.svg" alt="">
+          <img class="bb_7"src="images/72.svg" alt="">
+          <img class="bg_1"src="images/57.svg" alt="">
+          <img class="bg_2"src="images/58.svg" alt="">
+          <img class="bg_3"src="images/60.svg" alt="">
+          <img class="bg_4"src="images/61.svg" alt="">
+          <img class="bg_5"src="images/62.svg" alt="">
+          <img class="bg_6"src="images/63.svg" alt="">
+          <img class="bg_7"src="images/64.svg" alt="">
+          <img class="bg_8"src="images/65.svg" alt="">
+          <img class="bw_1"src="images/36.svg" alt="">
+          <img class="bw_2"src="images/37.svg" alt="">
+          <img class="bw_3"src="images/38.svg" alt="">
+          <img class="bw_4"src="images/39.svg" alt="">
+          <img class="bw_5"src="images/40.svg" alt="">
+          <img class="bw_6"src="images/41.svg" alt="">
+          <img class="bw_7"src="images/42.svg" alt="">
+          <img class="bw_8"src="images/43.svg" alt="">
+          <img class="bw_9"src="images/44.svg" alt="">
+          <img class="bw_10"src="images/45.svg" alt="">
+          <img class="bw_11"src="images/46.svg" alt="">
+          <img class="bw_12"src="images/47.svg" alt="">
+          <img class="bw_13"src="images/48.svg" alt="">
+          <img class="bw_14"src="images/49.svg" alt="">
+          <img class="bw_15"src="images/50.svg" alt="">
+          <img class="bw_16"src="images/51.svg" alt="">
+          <img class="bw_17"src="images/52.svg" alt="">
+          <img class="bw_18"src="images/53.svg" alt="">
+          <img class="bw_19"src="images/54.svg" alt="">
+          <img class="bw_20"src="images/55.svg" alt="">
+          <img class="bw_21"src="images/56.svg" alt="">
+          <img class="bw_22"src="images/71.svg" alt="">
+        </div>
+      </div>
+      <div class="right2">
+        <div class="pattern_black3">
+          <div class="rectangl_1">
+          </div>
+          <div class="rectangl_2">
+          </div>
+          <div class="rectangl_3">
+          </div>
+          <div class="rectangl_4">
+          </div>
+          <div class="rectangl_5">
+          </div>
+        </div>
+        <div class="plants_2">
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p class="name">POLIVE</p>
+      <p class="telephone">+7 495 284 74 29</p>
+      <p class="web">www.polive.com</p>
+      <div class="line1">
+      </div>
+      <div class="line2">
+      </div>
+      <div class="line3">
+      </div>
+      <div class="line4">
+      </div>
+      <div class="line5">
+      </div>
+      <div class="line6">
+      </div>
+      <div class="line7">
+      </div>
+      <div class="line8">
+      </div>
+      <div class="line9">
+      </div>
+      <div class="line10">
+      </div>
+      <div class="line11">
+      </div>
+      <div class="line12">
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
