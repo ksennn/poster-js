@@ -40,8 +40,38 @@
     </script> -->
     <script>
     $( function() {
-      $( "#draggable" ).draggable({ containment: "#window" });
+      $( ".draggable" ).draggable({ containment: "#window" });
     } );
+    </script>
+    <script type="text/javascript">
+    window.onload = function() {
+// find the element that you want to drag.
+var box = document.getElementById('.draggable');
+
+/* listen to the touchMove event,
+every time it fires, grab the location
+of touch and assign it to box */
+
+draggable.addEventListener('touchmove', function(e) {
+  // grab the location of touch
+  var touchLocation = e.targetTouches[0];
+
+  // assign box new coordinates based on the touch.
+  box.style.left = touchLocation.pageX + 'px';
+  box.style.top = touchLocation.pageY + 'px';
+})
+
+/* record the position of the touch
+when released using touchend event.
+This will be the drop position. */
+
+box.addEventListener('touchend', function(e) {
+  // current box position.
+  var x = parseInt(box.style.left);
+  var y = parseInt(box.style.top);
+})
+
+}
     </script>
 </head>
 <body>
@@ -92,7 +122,12 @@
         <div class="number_1">
           <h1>1</h1>
         </div>
-        <img class="p1"src="images/10.svg" alt="">
+        <div class="p1">
+          <svg width="103.5" height="105.5" viewBox="0 0 207 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M98.5465 140.869L26.3255 195.036L9.8397 174.625L71.8564 122.029L-16.0654 100.834V63.9379L71.8564 90.6284L64.0062 10.5568L86.7717 0.351562L98.5465 100.834L125.237 10.5568L144.863 17.6219L125.237 100.834L190.394 46.6674L206.094 77.2831L121.312 122.029L190.394 133.019V165.99L121.312 140.869V210.736H98.5465V140.869Z" fill="white"/>
+          </svg>
+        </div>
+
         <img class="p2"src="images/11.svg" alt="">
         <img class="p3"src="images/12.svg" alt="">
         <img class="p4"src="images/13.svg" alt="">
@@ -267,19 +302,28 @@
         <div class="number_4">
           <h1>4</h1>
         </div>
-        <div id="draggable" class="ui-widget-content">
-         <img class="flower_1"src="images/24.svg" alt="">
-         </div>
-         <img class="flower_2"src="images/25.svg" alt="">
-         <img class="flower_3"src="images/26.svg" alt="">
-         <img class="flower_4"src="images/27.svg" alt="">
-         <img class="flower_5"src="images/32.svg" alt="">
-         <img class="flower_6"src="images/33.svg" alt="">
-         <img class="vase_1"src="images/28.svg" alt="">
-         <img class="vase_2"src="images/29.svg" alt="">
-         <img class="vase_3"src="images/30.svg" alt="">
-         <img class="vase_4"src="images/31.svg" alt="">
-         <img class="vase_5"src="images/34.svg" alt="">
+        <div class=" draggable flower1">
+           </div>
+        <div class=" draggable flower2">
+           </div>
+        <div class=" draggable flower3">
+           </div>
+        <div class=" draggable flower4">
+           </div>
+        <div class=" draggable flower5">
+           </div>
+        <div class=" draggable flower6">
+           </div>
+        <div class=" draggable vase1">
+           </div>
+        <div class=" draggable vase2">
+           </div>
+        <div class=" draggable vase3">
+           </div>
+        <div class=" draggable vase4">
+           </div>
+        <div class=" draggable vase5">
+           </div>
 
       </div>
     </div>
