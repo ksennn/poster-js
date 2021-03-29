@@ -3,6 +3,12 @@
    font-family: 'Formular';
    src: url('../fonts/Formular.ttf') format('truetype');
  }
+ #box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+}
  .move-area{/*normally use body*/
 width: 100vw;
 height: 100vh;
