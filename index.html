@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="stylesheets/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -12,7 +13,7 @@
   <style media="screen">
     /* body::before {
       content: '';
-      background: url('images/d2.png');
+      background: url('images/i.png');
       opacity: .1;
       position: absolute;
       top: 0;
@@ -44,34 +45,110 @@
     } );
     </script>
     <script type="text/javascript">
-    window.onload = function() {
- // find the element that you want to drag.
- var box = document.getElementById('box');
+    $(function(){
+        $(".fl").on("click",function(){
+            $(".path1").attr("fill","#0A6C35");
+        });
+        $(".fl2").on("click",function(){
+            $(".path2").attr("fill","#18A53F");
+        });
+        $(".fl3").on("click",function(){
+            $(".path3").attr("fill","#0A6C35");
+        });
+        $(".fl4").on("click",function(){
+            $(".path4").attr("fill","#0A6C35");
+        });
+        $(".fl5").on("click",function(){
+            $(".path5").attr("fill","#18A53F");
+        });
+        $(".fl6").on("click",function(){
+            $(".path6").attr("fill","#18A53F");
+        });
+        $(".fl7").on("click",function(){
+            $(".path7").attr("fill","#0A6C35");
+        });
+        $(".fl8").on("click",function(){
+            $(".path8").attr("fill","#18A53F");
+        });
+        $(".fl9").on("click",function(){
+            $(".path9").attr("fill","#0A6C35");
+        });
+        $(".fl10").on("click",function(){
+            $(".path10").attr("fill","#0A6C35");
+        });
+        $(".fl11").on("click",function(){
+            $(".path11").attr("fill","#18A53F");
+        });
+          });
+    </script>
+    <script type="text/javascript">
+    function myRandom(){
+      return (Math.floor(Math.random()*2));
+    }
 
- /* listen to the touchMove event,
- every time it fires, grab the location
- of touch and assign it to box */
+    function fillForm(){
+    //   var idy = 0;
+    //   while (idy < 44) {
+    //     if (myRandom()){
+    //       $('#ran').append('<div class= "square" style= "background-color: white"></div>');
+    //     }
+    //     else {
+    //       $('#ran').append('<div class= "square"></div>');
+    //     }
+    //     idy++;
+    // }
 
- box.addEventListener('touchmove', function(e) {
-   // grab the location of touch
-   var touchLocation = e.targetTouches[0];
+     for (let i = 0; i < 11; i++) {
+        for (let j = 0; j < 4; j++) {
+          if (myRandom()){
+            $('#ran').append('<div class= "square" style= "background-color: #C6C6C6; left:' + j*25 + '%; top:' + i*9.1 + '%"></div>');
+          }
+          else {
+            $('#ran').append('<div class= "square" style= "left:' + j*25 + '%; top:' + i*9.1 + '%" ></div>');
+          }
+        }
+    }
+  }
+    $(document).ready(function () {
+        fillForm();
+        var textArray = [];
+        textArray[0] = '150мл / 20°С';
+        textArray[1] = '200мл / 23°С';
+        textArray[2] = '100мл / 18°С';
+        textArray[3] = '330мл / 23°С';
+        var imgArray=[];
+        imgArray[0] = 'images/22.svg';
+        imgArray[1] = 'images/Group 23.svg';
+        imgArray[2] = 'images/100.svg';
+        imgArray[3] = 'images/Group 22.svg';
+          $ ("#flower").attr("src", imgArray[0]);
+        var idx = 0;
+        $('#b1').on('click', function(){
+            idx++;
+            var newidx = idx % textArray.length;
+            $('#v1').text(textArray[newidx]);
+            $ ("#flower").attr("src", imgArray[newidx]);
+        });
+        $('#ran').on('click', function() {
+          $('#ran').empty();
+          fillForm();
+            // var idy = 0;
+            // while (idy < 44) {
+            //   if (myRandom()){
+            //     $('#ran').append('<div class= "square" style= "background-color: white"></div>');
+            //   }
+            //   else {
+            //     $('#ran').append('<div class= "square"></div>');
+            //   }
+            //   idy++;
+            //   // alert(idy);
+            //
+            // }
+         // $('#ran').append('<div class= "square"></div>');
+         // $('#ran').append('<div class= "square" style= "background-color: white"></div>');
 
-   // assign box new coordinates based on the touch.
-   box.style.left = touchLocation.pageX + 'px';
-   box.style.top = touchLocation.pageY + 'px';
- })
-
- /* record the position of the touch
- when released using touchend event.
- This will be the drop position. */
-
- box.addEventListener('touchend', function(e) {
-   // current box position.
-   var x = parseInt(box.style.left);
-   var y = parseInt(box.style.top);
- })
-
-}
+        });
+    });
     </script>
 </head>
 <body>
@@ -109,17 +186,12 @@
         </div>
       </div>
       <div class="water">
-
         <div class="circle">
         </div>
         <div class="circle2">
         </div>
         <div class="circle3">
         </div>
-        <div id="container">
-      <p>Toggle your browser device toolbar and change device to any mobile or tablet from your browser inspect.</p>
-      <div id="box"></div>
-    </div>
       </div>
     </div>
     <div class="main">
@@ -127,26 +199,65 @@
         <div class="number_1">
           <h1>1</h1>
         </div>
-        <div class="p1">
-          <svg width="103.5" height="105.5" viewBox="0 0 207 211" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M98.5465 140.869L26.3255 195.036L9.8397 174.625L71.8564 122.029L-16.0654 100.834V63.9379L71.8564 90.6284L64.0062 10.5568L86.7717 0.351562L98.5465 100.834L125.237 10.5568L144.863 17.6219L125.237 100.834L190.394 46.6674L206.094 77.2831L121.312 122.029L190.394 133.019V165.99L121.312 140.869V210.736H98.5465V140.869Z" fill="white"/>
+        <div class="fl9">
+          <svg width="100%" height="100%" viewBox="0 0 223 181" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path9" fill="#8F8F8F" d="M21.0124 103.877L174.68 180.414L197.226 141.849L177.647 93.1972H222.738L208.499 58.1918L150.948 45.7323L182.987 33.866L123.062 19.6266L66.1041 51.6654L71.4439 14.8801L0.839844 0.640625L21.0124 103.877Z" fill="#8F8F8F"/>
           </svg>
         </div>
-
-        <img class="p2"src="images/11.svg" alt="">
-        <img class="p3"src="images/12.svg" alt="">
-        <img class="p4"src="images/13.svg" alt="">
-        <img class="p5"src="images/14.svg" alt="">
-        <img class="p6"src="images/15.svg" alt="">
-        <img class="p7"src="images/16.svg" alt="">
-        <img class="p8"src="images/17.svg" alt="">
-        <img class="p9"src="images/18.svg" alt="">
-        <img class="p10"src="images/19.svg" alt="">
-        <img class="p11"src="images/20.svg" alt="">
+        <div class="fl4">
+          <svg width="100%" height="100%" viewBox="0 0 215 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path4" fill="#8F8F8F" d="M177.775 117.505C170.723 114.663 140.59 124.252 126.405 129.402L181.812 91.911C186.815 82.4461 181.478 78.4146 178.185 77.5819L163.71 71.7479C158.601 69.6888 128.035 78.8138 113.39 83.6337L141.985 67.9404L156.07 55.8017C159.922 50.9207 163.575 38.932 147.369 30.025C131.164 21.1179 96.0306 40.3456 80.4895 51.0728L39.0578 86.3365C36.6581 91.3079 33.1043 113.795 31.6274 124.417C28.8664 137.161 39.0612 171.458 44.5038 187.014C51.9601 203.876 61.047 205.724 64.6584 204.54L95.191 197.545C149.025 184.799 177.689 147.161 185.292 129.935L177.775 117.505Z" fill="#8F8F8F"/>
+          </svg>
+        </div>
+        <div class="fl2">
+          <svg width="100%" height="100%" viewBox="0 0 207 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path2" fill="#FFFFFF" d="M98.5465 140.869L26.3255 195.036L9.8397 174.625L71.8564 122.029L-16.0654 100.834V63.9379L71.8564 90.6284L64.0062 10.5568L86.7717 0.351562L98.5465 100.834L125.237 10.5568L144.863 17.6219L125.237 100.834L190.394 46.6674L206.094 77.2831L121.312 122.029L190.394 133.019V165.99L121.312 140.869V210.736H98.5465V140.869Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="fl">
+          <svg width="100%" height="100%" viewBox="0 0 158 215" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path1" fill="#8F8F8F" d="M120.514 205.129L49.6867 200.856C45.3651 200.595 36.7696 198.794 33.0121 197.925C10.1341 193.904 -6.50237 176.419 -11.9609 168.179L-2.74795 153.486C4.23499 154.713 27.7524 162.283 38.6382 165.915L43.5841 137.776C29.8183 137.855 3.87263 120.941 -7.37946 112.473L-3.31376 89.3413C3.23962 86.5456 34.3344 99.6858 49.0626 106.605L54.0084 78.4656C48.1867 74.9431 22.6999 50.9137 10.6842 39.3393L19.048 29.4768C26.333 26.8298 51.6723 41.1295 63.4314 48.6102L111.088 24.2826C136.79 16.2636 148.448 25.6255 151.065 31.3089C145.836 38.0208 106.829 48.516 87.9785 52.9246L83.9128 76.0566L87.4195 76.6729C94.2035 67.7613 130.256 61.9451 146.186 59.0672L146.913 83.7229C145.519 91.6538 103.417 100.833 82.5407 104.431L78.475 127.563C86.9806 125.243 124.005 118.078 141.454 114.786L137.388 137.918C130.666 146.547 91.4395 156.641 72.6668 160.609L70.1113 175.149C78.0558 172.73 110.431 174.741 125.625 176.049L120.514 205.129Z" fill="#8F8F8F"/>
+          </svg>
+        </div>
+        <div class="fl3">
+          <svg width="100%" height="100%" viewBox="0 0 96 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path3" fill="#8F8F8F" d="M94.7912 118.881L76 1.5L0.999996 1.5L17.5287 124.527L31.7462 85.6559L43.4764 124.723L53.2638 85.8184L74.8815 124.96L78.5362 91.6222L94.7912 118.881Z" fill="#8F8F8F"/>
+          </svg>
+        </div>
+        <div class="fl5">
+          <svg width="100%" height="100%" viewBox="0 0 100 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path5" fill="#FFFFFF" d="M3.06168 154.697C-7.37923 182.54 17.5631 273.609 31.3393 315.663L80.2814 319.1L94.4203 286.908C90.0699 269.413 91.1575 244.968 94.4203 226.479C97.0306 211.688 98.4082 157.96 98.7707 132.945V62.2506C101.381 32.6677 87.5321 9.3205 80.2814 1.34475C60.7045 -1.91806 45.4781 16.5713 45.4781 20.9217V89.4408C50.9161 126.419 50.9161 230.829 45.4781 226.479C41.1276 222.999 29.889 177.174 24.8135 154.697H3.06168Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="fl6">
+          <svg width="100%" height="100%" viewBox="0 0 127 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path6" fill="#FFFFFF" d="M8.26763 97.0606L126.076 75.5897L125.053 0.521295L0.986579 19.935L40.1503 33.326L1.34026 45.881L40.4436 54.8422L1.76833 77.2842L35.1764 80.2319L8.26763 97.0606Z" fill="#8F8F8F"/>
+          </svg>
+        </div>
+        <div class="fl7">
+          <svg width="100%" height="100%" viewBox="0 0 131 244" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path7" fill="#8F8F8F" d="M25.2345 30.2865L-70.4766 172.803L-35.1402 200.133L15.6297 186.99L9.81592 231.706L46.3651 222.098L66.1408 166.634L73.7772 199.935L95.624 142.347L71.1964 81.7336L106.986 91.7716L130.21 23.5928L25.2345 30.2865Z" fill="#8F8F8F"/>
+          </svg>
+        </div>
+        <div class="fl8">
+          <svg width="100%" height="100%" viewBox="0 0 130 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path8" fill="#FFFFFF" d="M37.9375 58.7457C26.3338 51.2348 9.65892 30.7172 35.7888 8.73503C45.5275 3.4777 66.3915 1.53304 71.9381 35.813C77.1216 25.4897 92.8242 8.83556 114.166 24.8059C140.844 44.7687 107.051 76.6196 91.3432 72.5574C102.128 77.8348 118.701 94.749 98.7162 120.187C74.128 151.483 50.1182 108.352 55.701 97.9471C48.6636 109.251 31.028 126.072 14.3289 106.294C-6.83853 81.2245 27.7213 59.3695 37.9375 58.7457Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="fl10">
+          <svg width="100%" height="100%" viewBox="0 0 179 215" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path10" fill="#8F8F8F" d="M142.041 205.305L71.214 201.033C66.8925 200.772 58.297 198.97 54.5394 198.102C31.6614 194.081 15.025 176.596 9.56649 168.356L18.7794 153.662C25.7623 154.89 49.2797 162.46 60.1655 166.092L65.1114 137.952C51.3456 138.032 25.4 121.117 14.1479 112.65L18.2136 89.518C24.767 86.7224 55.8617 99.8626 70.5899 106.782L75.5358 78.6423C69.714 75.1199 44.2272 51.0905 32.2115 39.5161L40.5753 29.6536C47.8603 27.0066 73.1997 41.3063 84.9587 48.787L132.615 24.4593C158.318 16.4403 169.976 25.8023 172.592 31.4857C167.363 38.1976 128.356 48.6928 109.506 53.1014L105.44 76.2333L108.947 76.8497C115.731 67.9381 151.783 62.1218 167.713 59.244L168.441 83.8997C167.047 91.8306 124.945 101.01 104.068 104.608L100.002 127.74C108.508 125.419 145.532 118.255 162.981 114.962L158.915 138.094C152.193 146.724 112.967 156.817 94.1942 160.785L91.6386 175.326C99.5831 172.906 131.958 174.917 147.152 176.225L142.041 205.305Z" fill="#8F8F8F"/>
+          </svg>
+        </div>
+        <div class="fl11">
+          <svg width="100%" height="100%" viewBox="0 0 143 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="path11" fill="#FFFFFF" d="M68.279 87.7622L24.2793 104.594L18.9313 91.9908L57.5858 74.4844L16.505 51.2521L21.7911 32.7385L62.0846 58.7282L69.6177 17.425L82.5031 15.5659L74.0151 67.6729L100.342 26.1978L109.178 32.5547L87.4082 71.497L127.863 53.6526L131.355 71.2644L82.4019 81.5701L115.491 96.9824L110.767 113.526L79.7025 91.0239L69.6926 126.082L58.269 122.82L68.279 87.7622Z" fill="white"/>
+          </svg>
+        </div>
       </div>
       <div class="right">
-      <div class="random">
-        <div class="square s_1">
+      <div id="ran" class="random">
+        <!-- <div class="square s_1">
         </div>
         <div class="square s_2">
         </div>
@@ -199,7 +310,7 @@
         <div class="square s_26">
         </div>
         <div class="square s_27">
-        </div>
+        </div> -->
       </div>
       <div class="right_block">
       <div class="head">
@@ -207,7 +318,7 @@
         <img class=""src="images/21.svg" alt="">
       </div>
       <div class="value">
-        <h1>150мл / 20°С</h1>
+        <h1 id="v1">150мл / 20°С</h1>
       </div>
       </div>
       <div class="bottom">
@@ -223,8 +334,9 @@
         <div class="number_2">
           <h1>2</h1>
         </div>
-      <div class="plant">
-        <img src="images/22.svg" alt="">
+      <div id="b1" class="plant">
+        <!-- <img id="flower" src="images/22.svg" alt=""> -->
+        <img id="flower">
       </div>
       <div class="pattern_black">
         <img src="images/23.svg" alt="">
@@ -232,10 +344,119 @@
       </div>
       </div>
       </div>
+      <div class="right_blocka">
+        <div class="water_a">
+          <div class="circle">
+          </div>
+          <div class="circle2">
+          </div>
+          <div class="circle3">
+          </div>
+        </div>
+        <div class="pattern_green">
+          <img class=""src="images/21.svg" alt="">
+        </div>
+      </div>
+      </div>
+      </div>
+      <div class="block_m">
+      <div class="pattern_greenm">
+         <img class=""src="images/Vector 317.svg" alt="">
+      </div>
+      <div class="water_m">
+        <div class="water_a">
+          <div class="circle">
+          </div>
+          <div class="circle2">
+          </div>
+          <div class="circle3">
+          </div>
+      </div>
       </div>
     </div>
-  </div>
-  <div class="list">
+   </div>
+
+  <div class="list1">
+    <div class="header_m">
+      <div class="pattern_black">
+        <img src="images/Group 12.svg" alt="">
+      </div>
+      <div class="value_m">
+        <div id="b1" class="plant">
+          <!-- <img id="flower" src="images/22.svg" alt=""> -->
+          <!-- <img id="flower"> -->
+        </div>
+        <div class="grid">
+          <img class="l_1"src="images/line.svg" alt="">
+          <img class="l_2"src="images/line.svg" alt="">
+          <img class="l_3"src="images/line.svg" alt="">
+        </div>
+      </div>
+      <div class="bottomm">
+      <div class="left_m">
+        <div class="value">
+          <h1 id="v1">150мл / 20°С</h1>
+        </div>
+        <div class="rain">
+          <div class="number_3">
+            <h1>3</h1>
+          </div>
+          <div class="drop1">
+          </div>
+          <div class="drop2">
+          </div>
+          <div class="drop3">
+          </div>
+          <div class="drop4">
+          </div>
+          <div class="drop5">
+          </div>
+          <div class="drop6">
+          </div>
+          <div class="drop7">
+          </div>
+          <div class="drop8">
+          </div>
+          <div class="drop9">
+          </div>
+          <div class="drop10">
+          </div>
+          <div class="drop11">
+          </div>
+          <div class="drop12">
+          </div>
+          <div class="drop13">
+          </div>
+          <div class="drop14">
+          </div>
+          <div class="drop15">
+          </div>
+          <div class="drop16">
+          </div>
+          <div class="drop17">
+          </div>
+          <div class="drop18">
+          </div>
+          </div>
+      </div>
+      <div class="right_m">
+        <div class="number5">
+          <div class="lamps">
+            <div class="number_5">
+              <h1>5</h1>
+            </div>
+            <div class="lamp_1">
+            </div>
+            <div class="lamp_2">
+            </div>
+          </div>
+          <div class="value_2">
+            <h1>55.7518° N 35.6173° E</h1>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
     <div class="header_2">
       <div class="number3">
         <div class="rain">
@@ -303,6 +524,28 @@
           <img src="images/pattern.svg" alt="">
         </div>
       </div>
+      <div class="right_a">
+          <div class="number2">
+            <div class="number_2">
+              <h1>2</h1>
+            </div>
+          <div id="b1" class="plant">
+            <img id="flower" src="images/22.svg" alt="">
+            <img id="flower">
+          </div>
+          <div class="value">
+            <h1 id="v1">150мл / 20°С</h1>
+          </div>
+          </div>
+          <div class="grid">
+          <img class="l_1"src="images/line.svg" alt="">
+          <img class="l_2"src="images/line.svg" alt="">
+          <img class="l_3"src="images/line.svg" alt="">
+          <img class="l_4"src="images/line.svg" alt="">
+          <img class="l_5"src="images/line.svg" alt="">
+          <img class="l_6"src="images/line.svg" alt="">
+        </div>
+      </div>
       <div id= "window"class="number4">
         <div class="number_4">
           <h1>4</h1>
@@ -329,10 +572,38 @@
            </div>
         <div class=" draggable vase5">
            </div>
-
-      </div>
+        </div>
     </div>
-    <div class="main_2">
+    <div class="main_2a">
+      <div id= "window"class="number4">
+        <div class="number_4">
+          <h1>4</h1>
+        </div>
+        <div class=" draggable flower1">
+           </div>
+        <div class=" draggable flower2">
+           </div>
+        <div class=" draggable flower3">
+           </div>
+        <div class=" draggable flower4">
+           </div>
+        <div class=" draggable flower5">
+           </div>
+        <div class=" draggable flower6">
+           </div>
+        <div class=" draggable vase1">
+           </div>
+        <div class=" draggable vase2">
+           </div>
+        <div class=" draggable vase3">
+           </div>
+        <div class=" draggable vase4">
+           </div>
+        <div class=" draggable vase5">
+           </div>
+        </div>
+      </div>
+      <div class="main_">
       <div class="number5">
         <div class="lamps">
           <div class="number_5">
@@ -396,7 +667,110 @@
     </div>
     </div>
     </div>
-  <div class="list">
+  <div class="list2">
+    <div class="pattern_m">
+    <img class="pat_m"src="images/Group 25.svg" alt="">
+    </div>
+    <div class="vase_m">
+    <div id= "window"class="number4">
+      <div class="number_4">
+        <h1>4</h1>
+      </div>
+      <div class=" draggable flower1">
+         </div>
+      <div class=" draggable flower2">
+         </div>
+      <div class=" draggable flower3">
+         </div>
+      <div class=" draggable flower4">
+         </div>
+      <div class=" draggable flower5">
+         </div>
+      <div class=" draggable flower6">
+         </div>
+      <div class=" draggable vase1">
+         </div>
+      <div class=" draggable vase2">
+         </div>
+      <div class=" draggable vase3">
+         </div>
+      <div class=" draggable vase4">
+         </div>
+      <div class=" draggable vase5">
+         </div>
+      </div>
+      </div>
+    <div class="block_a">
+      <div class="number6">
+        <div class="number_6">
+          <h1>6</h1>
+        </div>
+        <img class="eye_1"src="images/Vector 379.svg" alt="">
+        <img class="eye_2"src="images/eye2.svg" alt="">
+        <img class="eye_3"src="images/eye3.svg" alt="">
+        <img class="eye_4"src="images/eye4.svg" alt="">
+        <img class="eye_5"src="images/eye5.svg" alt="">
+        <img class="eye_6"src="images/eye6.svg" alt="">
+        <img class="eye_7"src="images/eye7.svg" alt="">
+        <img class="eye_8"src="images/eye8.svg" alt="">
+        <img class="eye_9"src="images/eye9.svg" alt="">
+        <img class="eye_10"src="images/eye10.svg" alt="">
+        <div class="pupil_1">
+        </div>
+        <div class="eye pupil_2">
+        </div>
+        <div class="pupil_3">
+        </div>
+        <div class="pupil_4">
+        </div>
+        <div class="pupil_5">
+        </div>
+        <div class="pupil_6">
+        </div>
+        <div class="pupil_7">
+        </div>
+        <div class="pupil_8">
+        </div>
+        <div class="pupil_9">
+        </div>
+        <div class="pupil_10">
+        </div>
+        </div>
+        <div class="pattern_blue">
+          <div class="line_1">
+          </div>
+          <div class="line_2">
+          </div>
+          <div class="line_3">
+          </div>
+          <div class="line_4">
+          </div>
+        </div>
+    </div>
+    <div class="bottom_a">
+      <div class="left_block">
+        <div class="pattern_black">
+          <img src="images/23.svg" alt="">
+        </div>
+        <div class="plants_a">
+
+        </div>
+      </div>
+      <div class="number5">
+        <div class="lamps">
+          <div class="number_5">
+            <h1>5</h1>
+          </div>
+          <div class="lamp_1">
+          </div>
+          <div class="lamp_2">
+          </div>
+        </div>
+        <div class="value_2">
+          <h1>55.7518° N 35.6173° E</h1>
+        </div>
+      </div>
+    </div>
     <div class="header_3">
       <div class="number7">
         <div class="pattern_green2">
@@ -491,6 +865,96 @@
       <div class="line12">
       </div>
     </div>
+  </div>
+  <div class="list3">
+    <div class="head_m">
+      <div class="patt_m">
+        <div class="rec_m">
+        </div>
+        <div class="rec2_m">
+        </div>
+      </div>
+      <div class="pl_m">
+      </div>
+    </div>
+    <div class="bblock_a">
+      <div class="pattern_green2">
+        <img class="pg"src="images/35.svg" alt="">
+      </div>
+      <div class="bacteria">
+        <div class="number_7">
+          <h1>7</h1>
+        </div>
+        <img class="bb_1"src="images/59.svg" alt="">
+        <img class="bb_2"src="images/66.svg" alt="">
+        <img class="bb_3"src="images/67.svg" alt="">
+        <img class="bb_4"src="images/68.svg" alt="">
+        <img class="bb_5"src="images/69.svg" alt="">
+        <img class="bb_6"src="images/70.svg" alt="">
+        <img class="bb_7"src="images/72.svg" alt="">
+        <img class="bg_1"src="images/57.svg" alt="">
+        <img class="bg_2"src="images/58.svg" alt="">
+        <img class="bg_3"src="images/60.svg" alt="">
+        <img class="bg_4"src="images/61.svg" alt="">
+        <img class="bg_5"src="images/62.svg" alt="">
+        <img class="bg_6"src="images/63.svg" alt="">
+        <img class="bg_7"src="images/64.svg" alt="">
+        <img class="bg_8"src="images/65.svg" alt="">
+        <img class="bw_1"src="images/36.svg" alt="">
+        <img class="bw_2"src="images/37.svg" alt="">
+        <img class="bw_3"src="images/38.svg" alt="">
+        <img class="bw_4"src="images/39.svg" alt="">
+        <img class="bw_5"src="images/40.svg" alt="">
+        <img class="bw_6"src="images/41.svg" alt="">
+        <img class="bw_7"src="images/42.svg" alt="">
+        <img class="bw_8"src="images/43.svg" alt="">
+        <img class="bw_9"src="images/44.svg" alt="">
+        <img class="bw_10"src="images/45.svg" alt="">
+        <img class="bw_11"src="images/46.svg" alt="">
+        <img class="bw_12"src="images/47.svg" alt="">
+        <img class="bw_13"src="images/48.svg" alt="">
+        <img class="bw_14"src="images/49.svg" alt="">
+        <img class="bw_15"src="images/50.svg" alt="">
+        <img class="bw_16"src="images/51.svg" alt="">
+        <img class="bw_17"src="images/52.svg" alt="">
+        <img class="bw_18"src="images/53.svg" alt="">
+        <img class="bw_19"src="images/54.svg" alt="">
+        <img class="bw_20"src="images/55.svg" alt="">
+        <img class="bw_21"src="images/56.svg" alt="">
+        <img class="bw_22"src="images/71.svg" alt="">
+      </div>
+      <div class="footer_a">
+        <p class="name">POLIVE</p>
+        <p class="telephone">+7 495 284 74 29</p>
+        <p class="web">www.polive.com</p>
+        <div class="line1">
+        </div>
+        <div class="line2">
+        </div>
+        <div class="line3">
+        </div>
+        <div class="line4">
+        </div>
+        <div class="line5">
+        </div>
+        <div class="line6">
+        </div>
+        <div class="line7">
+        </div>
+        <div class="line8">
+        </div>
+        <div class="line9">
+        </div>
+        <div class="line10">
+        </div>
+        <div class="line11">
+        </div>
+        <div class="line12">
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
   </div>
   </div>
 </body>
