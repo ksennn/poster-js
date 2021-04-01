@@ -1014,6 +1014,12 @@ h1 {
   opacity: 70%;
   animation: move_2 13s ease-in-out infinite, blink2 1.5s linear infinite ;
 }
+.lamp_1:hover {
+  animation-play-state:paused;
+}
+.lamp_2:hover {
+  animation-play-state:paused;
+}
 @keyframes blink2 {
   20% {
     opacity: 0;
@@ -1995,6 +2001,9 @@ h1 {
   .pattern_green img {
     position: absolute;
     width: 100%;
+  }
+  #flower2 {
+    left:0%;
   }
   .value {
     position: absolute;
