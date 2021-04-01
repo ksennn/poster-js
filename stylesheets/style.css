@@ -3,6 +3,7 @@
    font-family: 'Formular';
    src: url('../fonts/Formular.ttf') format('truetype');
  }
+
  .fl {
    width: 13vw;
    height: 15vw;
@@ -957,7 +958,7 @@ h1 {
   position: absolute;
   background-color: white;
   opacity: 100%;
-  animation: move 8s ease-in-out infinite, blink 1.5s linear infinite;
+  animation: move 10s ease-in-out infinite, blink 1.5s linear infinite;
 }
 @keyframes move {
   0% {
@@ -995,8 +996,11 @@ h1 {
   }
 }
 @keyframes blink {
-  20% {
+  10% {
     opacity: 0;
+  }
+  80% {
+    opacity:  100;
   }
 }
 .lamp_2 {
@@ -1008,41 +1012,49 @@ h1 {
   right: 17%;
   background-color: white;
   opacity: 70%;
-  /* animation: move_2 10s ease-in-out infinite, blink 1.5s linear infinite ; */
+  animation: move_2 13s ease-in-out infinite, blink2 1.5s linear infinite ;
+}
+@keyframes blink2 {
+  20% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 100;
+  }
 }
 @keyframes move_2 {
   0% {
-    transform: translate(1vw, 10vw);
+    transform: translate(0vw, 0vw);
   }
   10% {
-    transform: translate(6vw, 3vw);
+    transform: translate(3vw, -15vw);
   }
   20% {
     transform: translate(1vw, 0vw);
   }
   30% {
-    transform: translate(3vw, 9vw);
+    transform: translate(-9vw, -7vw);
   }
   40% {
-    transform: translate(12vw, 8vw);
+    transform: translate(3vw, 0vw);
   }
   50% {
-    transform: translate(5vw, 1vw);
+    transform: translate(-6vw, -3vw);
   }
   60% {
-    transform: translate(1vw, 9vw);
+    transform: translate(1vw, -16vw);
   }
   70% {
     transform: translate(2vw, 2vw);
   }
   80% {
-    transform: translate(15vw, 0vw);
+    transform: translate(-8vw, 0vw);
   }
   90% {
-    transform: translate(8vw, 7vw);
+    transform: translate(3vw, -6vw);
   }
   100% {
-    transform: translate(1vw, 10vw);
+    transform: translate(0vw, 0vw);
   }
 }
 .value_2 {
@@ -1542,6 +1554,27 @@ h1 {
   height: 63.5%;
   position: relative;
   background-color: #C6C6C6;
+}
+.pl1 {
+  width: 16vw;
+  height: 16vw;
+  position: absolute;
+  top: 3%;
+  right: 4%;
+}
+.pl2 {
+  width: 18vw;
+  height: 18vw;
+  position: absolute;
+  right: 0;
+  top: 45%;
+}
+.pl3 {
+  width: 25vw;
+  height: 25vw;
+  position: absolute;
+  top: 10%;
+  left: -5%;
 }
 .footer {
   width: 100%;
