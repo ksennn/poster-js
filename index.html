@@ -132,23 +132,75 @@
         $('#ran').on('click', function() {
           $('#ran').empty();
           fillForm();
-            // var idy = 0;
-            // while (idy < 44) {
-            //   if (myRandom()){
-            //     $('#ran').append('<div class= "square" style= "background-color: white"></div>');
-            //   }
-            //   else {
-            //     $('#ran').append('<div class= "square"></div>');
-            //   }
-            //   idy++;
-            //   // alert(idy);
-            //
-            // }
-         // $('#ran').append('<div class= "square"></div>');
-         // $('#ran').append('<div class= "square" style= "background-color: white"></div>');
-
         });
     });
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.green_p').hide();
+        var blackfl = 1;
+        $('#button_g').on('click', function(){
+        if (blackfl) {
+          blackfl = 0;
+          $('.blackb').fadeTo(500, 0);
+          // $('.blackb').hide();
+          $('.green_p').fadeTo(500, 100);
+          // $('.green_p').show();
+        }
+        else {
+          blackfl = 1;
+          // $('.blackb').show();
+          $('.blackb').fadeTo(1000, 100);
+          // $('.green_p').hide();
+          $('.green_p').fadeTo(500, 0);
+        }
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.dgreen_p').hide();
+        var greyfl = 1;
+        $('#button_dg').on('click', function(){
+        if (greyfl) {
+          greyfl = 0;
+          $('.greyb').fadeTo(500, 0);
+          // $('.blackb').hide();
+          $('.dgreen_p').fadeTo(500, 100);
+          // $('.green_p').show();
+        }
+        else {
+          greyfl = 1;
+          // $('.blackb').show();
+          $('.greyb').fadeTo(1000, 100);
+          // $('.green_p').hide();
+          $('.dgreen_p').fadeTo(500, 0);
+        }
+        });
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.green_pa').hide();
+        var whitefl = 1;
+        $('#button_p').on('click', function(){
+        if (whitefl) {
+          whitefl = 0;
+          $('.whiteb').fadeTo(500, 0);
+          // $('.blackb').hide();
+          $('.green_pa').fadeTo(500, 100);
+
+        }
+        else {
+          whitefl = 1;
+          // $('.blackb').show();
+          $('.whiteb').fadeTo(1000, 100);
+          // $('.green_p').hide();
+          $('.green_pa').fadeTo(500, 0);
+        }
+        });
+      });
     </script>
 </head>
 <body>
@@ -780,43 +832,80 @@
           <div class="number_7">
             <h1>7</h1>
           </div>
-          <img class="bb_1"src="images/59.svg" alt="">
-          <img class="bb_2"src="images/66.svg" alt="">
-          <img class="bb_3"src="images/67.svg" alt="">
-          <img class="bb_4"src="images/68.svg" alt="">
-          <img class="bb_5"src="images/69.svg" alt="">
-          <img class="bb_6"src="images/70.svg" alt="">
-          <img class="bb_7"src="images/72.svg" alt="">
-          <img class="bg_1"src="images/57.svg" alt="">
-          <img class="bg_2"src="images/58.svg" alt="">
-          <img class="bg_3"src="images/60.svg" alt="">
-          <img class="bg_4"src="images/61.svg" alt="">
-          <img class="bg_5"src="images/62.svg" alt="">
-          <img class="bg_6"src="images/63.svg" alt="">
-          <img class="bg_7"src="images/64.svg" alt="">
-          <img class="bg_8"src="images/65.svg" alt="">
-          <img class="bw_1"src="images/36.svg" alt="">
-          <img class="bw_2"src="images/37.svg" alt="">
-          <img class="bw_3"src="images/38.svg" alt="">
-          <img class="bw_4"src="images/39.svg" alt="">
-          <img class="bw_5"src="images/40.svg" alt="">
-          <img class="bw_6"src="images/41.svg" alt="">
-          <img class="bw_7"src="images/42.svg" alt="">
-          <img class="bw_8"src="images/43.svg" alt="">
-          <img class="bw_9"src="images/44.svg" alt="">
-          <img class="bw_10"src="images/45.svg" alt="">
-          <img class="bw_11"src="images/46.svg" alt="">
-          <img class="bw_12"src="images/47.svg" alt="">
-          <img class="bw_13"src="images/48.svg" alt="">
-          <img class="bw_14"src="images/49.svg" alt="">
-          <img class="bw_15"src="images/50.svg" alt="">
-          <img class="bw_16"src="images/51.svg" alt="">
-          <img class="bw_17"src="images/52.svg" alt="">
-          <img class="bw_18"src="images/53.svg" alt="">
-          <img class="bw_19"src="images/54.svg" alt="">
-          <img class="bw_20"src="images/55.svg" alt="">
-          <img class="bw_21"src="images/56.svg" alt="">
-          <img class="bw_22"src="images/71.svg" alt="">
+          <img class="blackb bb_1"src="images/59.svg" alt="">
+          <img class="green_p bb_1"src="images/Vector 472.svg" alt="">
+          <img class="blackb bb_2"src="images/66.svg" alt="">
+          <img class="green_p bb_2"src="images/Vector 472.svg" alt="">
+          <img class="blackb bb_3"src="images/67.svg" alt="">
+          <img class="green_p bb_3"src="images/Vector 472.svg" alt="">
+          <img class="blackb bb_4"src="images/68.svg" alt="">
+          <img class="green_p bb_4"src="images/Vector 472.svg" alt="">
+          <img class="blackb bb_5"src="images/69.svg" alt="">
+          <img class="green_p bb_5"src="images/Vector 472.svg" alt="">
+          <img class="blackb bb_6"src="images/70.svg" alt="">
+          <img class="green_p bb_6"src="images/Vector 472.svg" alt="">
+          <img class="blackb bb_7"src="images/72.svg" alt="">
+          <img class="green_p bb_7"src="images/Vector 472.svg" alt="">
+          <img class="greyb bg_1"src="images/57.svg" alt="">
+          <img class="dgreen_p bg_1"src="images/Vector 412.svg" alt="">
+          <img class="greyb bg_2"src="images/58.svg" alt="">
+          <img class="dgreen_p bg_2"src="images/Vector 412.svg" alt="">
+          <img class="greyb bg_3"src="images/60.svg" alt="">
+          <img class="dgreen_p bg_3"src="images/Vector 412.svg" alt="">
+          <img class="greyb bg_4"src="images/61.svg" alt="">
+          <img class="dgreen_p bg_4"src="images/Vector 412.svg" alt="">
+          <img class="greyb bg_5"src="images/62.svg" alt="">
+          <img class="dgreen_p bg_5"src="images/Vector 412.svg" alt="">
+          <img class="greyb bg_6"src="images/63.svg" alt="">
+          <img class="dgreen_p bg_6"src="images/Vector 412.svg" alt="">
+          <img class="greyb bg_7"src="images/64.svg" alt="">
+          <img class="dgreen_p bg_7"src="images/Vector 412.svg" alt="">
+          <img class="greyb bg_8"src="images/65.svg" alt="">
+          <img class="dgreen_p bg_8"src="images/Vector 412.svg" alt="">
+          <img class="whiteb bw_1"src="images/36.svg" alt="">
+          <img class="green_pa bw_1"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_2"src="images/37.svg" alt="">
+          <img class="green_pa bw_2"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_3"src="images/38.svg" alt="">
+          <img class="green_pa bw_3"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_4"src="images/39.svg" alt="">
+          <img class="green_pa bw_4"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_5"src="images/40.svg" alt="">
+          <img class="green_pa bw_5"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_6"src="images/41.svg" alt="">
+          <img class="green_pa bw_6"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_7"src="images/42.svg" alt="">
+          <img class="green_pa bw_7"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_8"src="images/43.svg" alt="">
+          <img class="green_pa bw_8"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_9"src="images/44.svg" alt="">
+          <img class="green_pa bw_9"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_10"src="images/45.svg" alt="">
+          <img class="green_pa bw_10"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_11"src="images/46.svg" alt="">
+          <img class="green_pa bw_11"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_12"src="images/47.svg" alt="">
+          <img class="green_pa bw_12"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_13"src="images/48.svg" alt="">
+          <img class="green_pa bw_13"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_14"src="images/49.svg" alt="">
+          <img class="green_pa bw_14"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_15"src="images/50.svg" alt="">
+          <img class="green_pa bw_15"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_16"src="images/51.svg" alt="">
+          <img class="green_pa bw_16"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_17"src="images/52.svg" alt="">
+          <img class="green_pa bw_17"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_18"src="images/53.svg" alt="">
+          <img class="green_pa bw_18"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_19"src="images/54.svg" alt="">
+          <img class="green_pa bw_19"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_20"src="images/55.svg" alt="">
+          <img class="green_pa bw_20"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_21"src="images/56.svg" alt="">
+          <img class="green_pa bw_21"src="images/Vector 289.svg" alt="">
+          <img class="whiteb bw_22"src="images/71.svg" alt="">
+          <img class="green_pa bw_22"src="images/Vector 289.svg" alt="">
         </div>
       </div>
       <div class="right2">
@@ -833,6 +922,9 @@
           </div>
         </div>
         <div class="plants_2">
+          <img id="button_g" class="pl1"src="images/Vector 472.svg" alt="">
+          <img id="button_p" class="pl2"src="images/Vector 289.svg" alt="">
+          <img id="button_dg" class="pl3"src="images/Vector 412.svg" alt="">
         </div>
       </div>
     </div>
@@ -885,43 +977,44 @@
         <div class="number_7">
           <h1>7</h1>
         </div>
-        <img class="bb_1"src="images/59.svg" alt="">
-        <img class="bb_2"src="images/66.svg" alt="">
-        <img class="bb_3"src="images/67.svg" alt="">
-        <img class="bb_4"src="images/68.svg" alt="">
-        <img class="bb_5"src="images/69.svg" alt="">
-        <img class="bb_6"src="images/70.svg" alt="">
-        <img class="bb_7"src="images/72.svg" alt="">
-        <img class="bg_1"src="images/57.svg" alt="">
-        <img class="bg_2"src="images/58.svg" alt="">
-        <img class="bg_3"src="images/60.svg" alt="">
-        <img class="bg_4"src="images/61.svg" alt="">
-        <img class="bg_5"src="images/62.svg" alt="">
-        <img class="bg_6"src="images/63.svg" alt="">
-        <img class="bg_7"src="images/64.svg" alt="">
-        <img class="bg_8"src="images/65.svg" alt="">
-        <img class="bw_1"src="images/36.svg" alt="">
-        <img class="bw_2"src="images/37.svg" alt="">
-        <img class="bw_3"src="images/38.svg" alt="">
-        <img class="bw_4"src="images/39.svg" alt="">
-        <img class="bw_5"src="images/40.svg" alt="">
-        <img class="bw_6"src="images/41.svg" alt="">
-        <img class="bw_7"src="images/42.svg" alt="">
-        <img class="bw_8"src="images/43.svg" alt="">
-        <img class="bw_9"src="images/44.svg" alt="">
-        <img class="bw_10"src="images/45.svg" alt="">
-        <img class="bw_11"src="images/46.svg" alt="">
-        <img class="bw_12"src="images/47.svg" alt="">
-        <img class="bw_13"src="images/48.svg" alt="">
-        <img class="bw_14"src="images/49.svg" alt="">
-        <img class="bw_15"src="images/50.svg" alt="">
-        <img class="bw_16"src="images/51.svg" alt="">
-        <img class="bw_17"src="images/52.svg" alt="">
-        <img class="bw_18"src="images/53.svg" alt="">
-        <img class="bw_19"src="images/54.svg" alt="">
-        <img class="bw_20"src="images/55.svg" alt="">
-        <img class="bw_21"src="images/56.svg" alt="">
-        <img class="bw_22"src="images/71.svg" alt="">
+        <img class="blackb bb_1"src="images/59.svg" alt="">
+        <img class="green_p bb_1"src="images/Vector 472.svg" alt="">
+        <img class="blackb bb_2"src="images/66.svg" alt="">
+        <img class="blackb bb_3"src="images/67.svg" alt="">
+        <img class="blackb bb_4"src="images/68.svg" alt="">
+        <img class="blackb bb_5"src="images/69.svg" alt="">
+        <img class="blackb bb_6"src="images/70.svg" alt="">
+        <img class="blackb bb_7"src="images/72.svg" alt="">
+        <img class="greyb bg_1"src="images/57.svg" alt="">
+        <img class="greyb bg_2"src="images/58.svg" alt="">
+        <img class="greyb bg_3"src="images/60.svg" alt="">
+        <img class="greyb bg_4"src="images/61.svg" alt="">
+        <img class="greyb bg_5"src="images/62.svg" alt="">
+        <img class="greyb bg_6"src="images/63.svg" alt="">
+        <img class="greyb bg_7"src="images/64.svg" alt="">
+        <img class="greyb bg_8"src="images/65.svg" alt="">
+        <img class="whiteb bw_1"src="images/36.svg" alt="">
+        <img class="whiteb bw_2"src="images/37.svg" alt="">
+        <img class="whiteb bw_3"src="images/38.svg" alt="">
+        <img class="whiteb bw_4"src="images/39.svg" alt="">
+        <img class="whiteb bw_5"src="images/40.svg" alt="">
+        <img class="whiteb bw_6"src="images/41.svg" alt="">
+        <img class="whiteb bw_7"src="images/42.svg" alt="">
+        <img class="whiteb bw_8"src="images/43.svg" alt="">
+        <img class="whiteb bw_9"src="images/44.svg" alt="">
+        <img class="whiteb bw_10"src="images/45.svg" alt="">
+        <img class="whiteb bw_11"src="images/46.svg" alt="">
+        <img class="whiteb bw_12"src="images/47.svg" alt="">
+        <img class="whiteb bw_13"src="images/48.svg" alt="">
+        <img class="whiteb bw_14"src="images/49.svg" alt="">
+        <img class="whiteb bw_15"src="images/50.svg" alt="">
+        <img class="whiteb bw_16"src="images/51.svg" alt="">
+        <img class="whiteb bw_17"src="images/52.svg" alt="">
+        <img class="whiteb bw_18"src="images/53.svg" alt="">
+        <img class="whiteb bw_19"src="images/54.svg" alt="">
+        <img class="whiteb bw_20"src="images/55.svg" alt="">
+        <img class="whiteb bw_21"src="images/56.svg" alt="">
+        <img class="whiteb bw_22"src="images/71.svg" alt="">
       </div>
       <div class="footer_a">
         <p class="name">POLIVE</p>
