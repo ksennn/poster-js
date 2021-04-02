@@ -3421,6 +3421,9 @@ h1 {
     height: 100%;
     background-color: #C6C6C6;
    }
+   .pattern_green2 {
+     top: -1%;
+   }
    .footer_a {
      display: block;
      width: 100%;
