@@ -2009,15 +2009,15 @@ h1 {
     position: absolute;
     font-size: 3.5vw;
     overflow: hidden;
-    width: 100%;
+    width: 110%;
     word-spacing: 4vw;
   }
   .textline_2 p {
     font-family: 'Formular';
     position: absolute;
-    font-size: 2.3vw;
+    font-size: 3.5vw;
     overflow: hidden;
-    width: 100%;
+    width: 110%;
     z-index: 1;
     word-spacing: 4vw;
   }
@@ -2025,38 +2025,40 @@ h1 {
     word-spacing: 4vw;
     font-family: 'Formular';
     position: absolute;
-    font-size: 2.3vw;
+    font-size: 3.5vw;
     overflow: hidden;
-    width: 100%;
+    width: 120%;
   }
   .textline_1 {
-    width: 110%;
+    width: 100%;
     height: 10%;
     position: relative;
-    top: 17%;
+    top: 18%;
     transform: rotate(1.5deg);
+    overflow: hidden;
   }
   .textline_2 {
     width: 100%;
     height: 10%;
     position: relative;
-    top: 35.5%;
+    top: 36.5%;
     transform: rotate(2.2deg);
+    overflow: hidden;
   }
   .textline_3 {
     width: 100%;
     height: 10%;
     position: relative;
-    top: 53.5%;
+    top: 55%;
     transform: rotate(-3.3deg);
     z-index: 8;
+    overflow: hidden;
   }
   .row_2 {
     width: 100%;
     height: 80%;
     display: block;
     position: absolute;
-    /* animation: row-move2 0.5s linear infinite; */
     animation: none;
   }
   .row {
@@ -2078,7 +2080,7 @@ h1 {
   }
   @keyframes row-move2 {
       0% {right: -20%;}
-      100% {right: 0.9%;}
+      100% {right: 80%;}
   }
   .number_1 {
     width: 5vw;
@@ -2192,6 +2194,18 @@ h1 {
   }
   .water {
     display: none;
+  }
+  .circle {
+    width: 12vw;
+    height: 12vw;
+  }
+  .circle2 {
+    width: 12vw;
+    height: 12vw;
+  }
+  .circle3 {
+    width: 12vw;
+    height: 12vw;
   }
   .pattern_green {
     position: absolute;
@@ -2336,35 +2350,35 @@ h1 {
   }
   .drop2 {
     width: 3.5vw;
-    height: 13vw;
+    height: 14vw;
     position: absolute;
     left: 10.5%;
     background-color: #393EB9;
   }
   .drop3 {
     width: 3.5vw;
-    height: 11.2vw;
+    height: 10.2vw;
     position: absolute;
     left: 28%;
     background-color: #393EB9;
   }
   .drop4 {
     width: 3.5vw;
-    height: 13vw;
+    height: 12vw;
     position: absolute;
     left: 36.5%;
     background-color: #393EB9;
   }
   .drop5 {
     width: 3.5vw;
-    height: 13vw;
+    height: 11vw;
     position: absolute;
     left: 45%;
     background-color: #393EB9;
   }
   .drop6 {
     width: 3.5vw;
-    height: 12vw;
+    height: 15vw;
     position: absolute;
     left: 58.5%;
     background-color: #393EB9;
@@ -2734,6 +2748,22 @@ h1 {
     width: 35vw;
     height: 35vw;
   }
+  .line_1 {
+    width: 40vw;
+    height: 20vw;
+  }
+  .line_2 {
+    width: 13vw;
+    height: 40vw;
+  }
+  .line_3 {
+    width: 15vw;
+    height: 30vw;
+  }
+  .p_ {
+    width: 4vw;
+    height: 4vw;
+  }
   .footer {
     display: none;
   }
@@ -2993,7 +3023,7 @@ h1 {
    .textline_1 p{
      font-family: 'Formular';
      position: absolute;
-     font-size: 2.3vw;
+     font-size: 3.3vw;
      overflow: hidden;
      width: 100%;
      word-spacing: 4vw;
@@ -3001,7 +3031,7 @@ h1 {
    .textline_2 p {
      font-family: 'Formular';
      position: absolute;
-     font-size: 2.3vw;
+     font-size: 3.3vw;
      overflow: hidden;
      width: 100%;
      z-index: 1;
@@ -3011,7 +3041,7 @@ h1 {
      word-spacing: 4vw;
      font-family: 'Formular';
      position: absolute;
-     font-size: 2.3vw;
+     font-size: 3.3vw;
      overflow: hidden;
      width: 100%;
    }
@@ -3214,6 +3244,18 @@ h1 {
    .water {
      display: none;
    }
+   .circle {
+     width: 21vw;
+     height: 21vw;
+   }
+   .circle2 {
+     width: 21vw;
+     height: 21vw;
+   }
+   .circle3 {
+     width: 21vw;
+     height: 21vw;
+   }
    .pattern_green {
      position: absolute;
      height: 25%;
@@ -3349,6 +3391,127 @@ h1 {
    .value_2 {
      left: -4%;
    }
+   .drop1 {
+     width: 4vw;
+     height: 35vw;
+   }
+   .drop2 {
+     width: 4vw;
+     height: 25vw;
+   }
+   .drop3 {
+     width: 4vw;
+     height: 20vw;
+   }
+   .drop4 {
+     width: 4vw;
+     height: 35vw;
+   }
+   .drop5 {
+     width: 4vw;
+     height: 20vw;
+   }
+   .drop6 {
+     width: 4vw;
+     height: 35vw;
+   }
+   .drop7 {
+     width: 4vw;
+     height: 20vw;
+   }
+   .drop8 {
+     width: 4vw;
+     height: 30vw;
+   }
+   .drop9 {
+     width: 4vw;
+   }
+   .drop10 {
+     width: 4vw;
+   }
+   .drop11 {
+     width: 4vw;
+   }
+   .drop12 {
+     width: 4vw;
+   }
+   .drop13 {
+     width: 4vw;
+   }
+   .drop14 {
+     width: 4vw;
+   }
+   .drop15 {
+     width: 4vw;
+   }
+   .drop16 {
+     width: 4vw;
+   }
+   .drop17 {
+     width: 4vw;
+   }
+   .drop18 {
+     width: 4vw;
+     height: 10vw;
+   }
+   .drop19 {
+     width: 4vw;
+     height: 5vw;
+   }
+   .drop20 {
+     width: 4vw;
+
+   }
+   .drop21 {
+     width: 4vw;
+   }
+   .drop22 {
+     width: 4vw;
+   }
+   .drop23 {
+     width: 4vw;
+     height: 3vw;
+   }
+   .drop24 {
+     width: 4vw;
+
+   }
+   .drop25 {
+     width: 4vw;
+
+   }
+   .drop26 {
+     width: 4vw;
+
+   }
+   .drop27 {
+     width: 4vw;
+
+   }
+   .drop28 {
+     width: 4vw;
+
+   }
+   .line_1 {
+     width: 40vw;
+     height: 25vw;
+   }
+   .line_2 {
+     width: 15vw;
+     height: 50vw;
+   }
+   .line_3 {
+     width: 15vw;
+     height: 60vw;
+   }
+   .line_4 {
+     width: 20vw;
+     height: 40vw;
+   }
+   .p_ {
+     width: 4vw;
+     height: 4vw;
+   }
    .bottomm {
      display: block;
      width: 100%;
@@ -3406,7 +3569,7 @@ h1 {
      width: 100%;
      border-top: 2px solid black;
      position: absolute;
-     top: 0.5%;
+     top: 0.2%;
    }
    .pat_m {
      width: 100%;
@@ -3716,7 +3879,7 @@ h1 {
      left: 70%;
    }
    .web {
-     top: 32%;
+     top: 29%;
      left: 70.2%;
    }
  }
