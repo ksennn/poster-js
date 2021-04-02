@@ -83,32 +83,6 @@
    width: 10vw;
    height: 10vw;
  }
- .move-area{/*normally use body*/
-width: 100vw;
-height: 100vh;
-padding: 10% 45%;
-}
-.container {
-width: 100%;
-}
-.eye {
-position: relative;
-display: inline-block;
-border-radius: 50%;
-height: 30px;
-width: 30px;
-background: #CCC;
-}
-.eye:after { /*pupil*/
-position: absolute;
-bottom: 17px;
-right: 10px;
-width: 10px;
-height: 10px;
-background: #000;
-border-radius: 50%;
-content: " ";
-}
 
  .flower1 {
    background: url("../images/24.svg");
@@ -1513,6 +1487,57 @@ h1 {
   right: 10%;
   top: 20%;
 }
+.blackb {
+  animation: move_ 5s linear infinite;
+}
+@keyframes move_  {
+  0% {
+    transform: translate(0vw, 0vw);
+  }
+  25% {
+    transform: translate(1vw, 2vw);
+  }
+  50% {
+    transform: translate(3vw, 2vw);
+  }
+  75% {
+    transform: translate(1vw, 2vw);
+  }
+}
+.greyb {
+  animation: move_g 5s linear infinite;
+}
+@keyframes move_g  {
+  0% {
+    transform: translate(0vw, 0vw);
+  }
+  25% {
+    transform: translate(-1vw, -1vw);
+  }
+  50% {
+    transform: translate(0vw, 1vw);
+  }
+  75% {
+    transform: translate(1vw, -1vw);
+  }
+}
+.whiteb {
+  animation: move_w 5s linear infinite;
+}
+@keyframes move_w  {
+  0% {
+    transform: translate(0vw, 0vw);
+  }
+  25% {
+    transform: translate(-2vw, 1vw);
+  }
+  50% {
+    transform: translate(1vw, 1vw);
+  }
+  75% {
+    transform: translate(0vw, -2vw);
+  }
+}
 .pattern_black3 {
   width: 100%;
   height: 36.5%;
@@ -1798,7 +1823,7 @@ h1 {
   .textline_1 p{
     font-family: 'Formular';
     position: absolute;
-    font-size: 2.3vw;
+    font-size: 3.5vw;
     overflow: hidden;
     width: 100%;
     word-spacing: 4vw;
@@ -1821,7 +1846,7 @@ h1 {
     width: 100%;
   }
   .textline_1 {
-    width: 100%;
+    width: 110%;
     height: 10%;
     position: relative;
     top: 17%;
@@ -1872,8 +1897,8 @@ h1 {
       100% {right: 0.9%;}
   }
   .number_1 {
-    width: 3.6vw;
-    height: 4.8vw;
+    width: 5vw;
+    height: 7vw;
     position: absolute;
     top: 0;
     background-color: white;
@@ -1890,63 +1915,58 @@ h1 {
     margin-right: -4px;
     background-color: #C6C6C6;
   }
+  .fl9 {
+    top: 18vw;
+    right: 8vw;
+    width: 20vw;
+  }
+  .fl2 {
+    width: 25vw;
+    height: 20vw;
+  }
+  .fl {
+    top: 20vw;
+    width: 15vw;
+    height: 20vw;
+  }
+  .fl5 {
+    bottom: 0vw;
+    left: 9vw;
+    width: 15vw;
+    height: 28vw;
+  }
+  .fl7 {
+    bottom: 0vw;
+    left: 0vw;
+    width: 15vw;
+    height: 20vw;
+  }
+  .fl11 {
+    bottom: 5vw;
+    right: 8vw;
+    width: 20vw;
+    height: 20vw;
+  }
+  .fl10 {
+    bottom: 1vw;
+    right: -2vw;
+    width: 20vw;
+    height: 20vw;
+  }
+  .fl6 {
+    top: 27vw;
+    width: 10vw;
+    height: 10vw;
+  }
+  .fl4 {
+    right: 7vw;
+  }
+  .fl8 {
+    width: 12vw;
+    height: 12vw;
+  }
   .plants img {
     position: absolute;
-  }
-  .p11 {
-    top: 34%;
-    right: 20%;
-    width: 48%;
-  }
-  .p10 {
-    top: 66.5%;
-    right: 0;
-    width: 40%;
-  }
-  .p9 {
-    right: 27.5%;
-    top: 65%;
-    width: 30%;
-  }
-  .p8 {
-    right: 2%;
-    top: 27.5%;
-    width: 25%;
-  }
-  .p7 {
-    left: 0;
-    top: 63%;
-    width: 28%;
-  }
-  .p6 {
-    right: -1%;
-    top: 53%;
-    width: 28%;
-  }
-  .p5 {
-    left: 22%;
-    bottom: 0%;
-    width: 22%;
-  }
-  .p4 {
-    right: 18%;
-    top: 5%;
-    width: 45%;
-  }
-  .p3 {
-    left: 0%;
-    top: 32%;
-    width: 35%;
-  }
-  .p2 {
-    right: 5%;
-    top: -0.3%;
-    width: 22%;
-  }
-  .p1 {
-    left: 3%;
-    top: 8%;
-    width: 40%;
   }
   .right {
     height: 100%;
@@ -2003,7 +2023,9 @@ h1 {
     width: 100%;
   }
   #flower2 {
-    left:0%;
+    top: 10%;
+    left:5%;
+    width: 90%;
   }
   .value {
     position: absolute;
@@ -2014,7 +2036,7 @@ h1 {
     border-top: 2px solid black;
   }
   .value h1 {
-    left: 14%;
+    left: 9.5%;
   }
   .bottom {
     display: none;
@@ -2062,8 +2084,8 @@ h1 {
 
   }
   .number_2 {
-    width: 3.6vw;
-    height: 4.8vw;
+    width: 5vw;
+    height: 7vw;
     position: absolute;
     top: 0;
     background-color: white;
@@ -2110,10 +2132,11 @@ h1 {
     background-color: #C6C6C6;
   }
   .number_3 {
-    width: 3.6vw;
-    height: 4.8vw;
+    width: 5vw;
+    height: 7vw;
     position: absolute;
     bottom: 0;
+    right: 0;
     background-color: white;
   }
   .number_3 h1 {
@@ -2121,63 +2144,63 @@ h1 {
     left: 23%;
   }
   .drop1 {
-    width: 2.3vw;
+    width: 3.5vw;
     height: 11.2vw;
     position: absolute;
     top: 0;
     background-color: #393EB9;
   }
   .drop2 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 13vw;
     position: absolute;
     left: 10.5%;
     background-color: #393EB9;
   }
   .drop3 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 11.2vw;
     position: absolute;
     left: 28%;
     background-color: #393EB9;
   }
   .drop4 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 13vw;
     position: absolute;
     left: 36.5%;
     background-color: #393EB9;
   }
   .drop5 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 13vw;
     position: absolute;
     left: 45%;
     background-color: #393EB9;
   }
   .drop6 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 12vw;
     position: absolute;
     left: 58.5%;
     background-color: #393EB9;
   }
   .drop7 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 10.5vw;
     position: absolute;
     right: 12.5%;
     background-color: #393EB9;
   }
   .drop8 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 9vw;
     position: absolute;
     right: 0%;
     background-color: #393EB9;
   }
   .drop9 {
-    width: 2.3vw;
+    width: 3.5vw;
     height: 4vw;
     position: absolute;
     top: 50%;
@@ -2185,7 +2208,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop10 {
-    width: 2.3vw;
+    width: 3.5vw;
     height: 2vw;
     position: absolute;
     top: 70%;
@@ -2193,7 +2216,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop11 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 4vw;
     position: absolute;
     top: 43%;
@@ -2201,7 +2224,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop12 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 2.5vw;
     position: absolute;
     top: 58%;
@@ -2209,7 +2232,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop13 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 1.5vw;
     position: absolute;
     top: 73%;
@@ -2217,7 +2240,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop14 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 5vw;
     position: absolute;
     top: 40%;
@@ -2225,7 +2248,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop15 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 2.5vw;
     position: absolute;
     top: 63%;
@@ -2233,7 +2256,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop16 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 1.5vw;
     position: absolute;
     top: 78%;
@@ -2241,7 +2264,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop17 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 5vw;
     position: absolute;
     top: 46%;
@@ -2249,7 +2272,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop18 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 5vw;
     position: absolute;
     top: 43%;
@@ -2257,7 +2280,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop19 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 1vw;
     position: absolute;
     top: 66%;
@@ -2265,7 +2288,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop20 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 1vw;
     position: absolute;
     top: 89%;
@@ -2273,7 +2296,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop21 {
-    width: 2.3vw;
+    width: 3.5vw;
     height: 4vw;
     position: absolute;
     top: 50%;
@@ -2281,7 +2304,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop22 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 4vw;
     position: absolute;
     top: 36%;
@@ -2289,7 +2312,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop23 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 1.5vw;
     position: absolute;
     top: 53%;
@@ -2297,7 +2320,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop24 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 2.5vw;
     position: absolute;
     top: 75%;
@@ -2305,7 +2328,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop25 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 1vw;
     position: absolute;
     top: 87%;
@@ -2313,7 +2336,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop26 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 3vw;
     position: absolute;
     right: 0%;
@@ -2321,7 +2344,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop27 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 3vw;
     position: absolute;
     right: 0%;
@@ -2329,7 +2352,7 @@ h1 {
     background-color: #393EB9;
   }
   .drop28 {
-    width: 2.4vw;
+    width: 3.5vw;
     height: 2vw;
     position: absolute;
     right: 0%;
@@ -2345,12 +2368,15 @@ h1 {
   .pattern_black2 {
     display: none;
   }
-  .number4 {
+  .number4_a {
+    height: 100%;
     width: 100%;
+    position: relative;
+    background-color: #C6C6C6;
   }
   .number_4 {
-    width: 3.6vw;
-    height: 4.8vw;
+    width: 5vw;
+    height: 7vw;
     position: absolute;
     top: 0;
     background-color: white;
@@ -2365,9 +2391,21 @@ h1 {
   }
   h1 {
     font-family: 'Formular';
-    font-size: 4vw;
+    font-size: 4.5vw;
     position: absolute;
     font-style: normal;
+  }
+  .number_5 {
+    width: 5vw;
+    height: 7vw;
+  }
+  .number_6 {
+    width: 5vw;
+    height: 7vw;
+  }
+  .number_7 {
+    width: 5vw;
+    height: 7vw;
   }
   .main_2a {
     width: 100%;
@@ -2385,101 +2423,101 @@ h1 {
   }
   .flower1 {
     background: url("../images/24.svg");
-    width: 15vw;
-    height: 15vw;
+    width: 19vw;
+    height: 19vw;
     background-size: 100% auto;
     position: absolute;
-    top: 30.5%;
+    top: 13%;
     left: 5.5%;
   }
   .flower2 {
     background: url("../images/25.svg");
-    width: 13vw;
-    height: 13vw;
+    width: 17vw;
+    height: 17vw;
     background-size: 100% auto;
     position: absolute;
-    top: 21.5%;
+    top: 23%;
     right: 24%;
   }
   .flower3 {
     background: url("../images/26.svg");
-    width: 4vw;
-    height: 3.85vw;
+    width: 7vw;
+    height: 6.7vw;
     background-size: 100% auto;
     position: absolute;
-    top: 53.5%;
+    top: 48%;
     left: 31.5%;
   }
   .flower4 {
     background: url("../images/27.svg");
-    width: 4vw;
-    height: 3.85vw;
+    width: 7vw;
+    height: 6.85vw;
     background-size: 100% auto;
     position: absolute;
-    top: 43%;
+    top: 36%;
     left: 31.5%;
   }
   .flower5 {
     background: url("../images/32.svg");
-    width: 5vw;
-    height: 5vw;
+    width: 8vw;
+    height: 8vw;
     background-size: 100% auto;
     position: absolute;
-    top: 28%;
+    top: 20.5%;
     left: 39.8%;
   }
   .flower6 {
     background: url("../images/33.svg");
-    width: 6vw;
-    height: 5.85vw;
+    width: 9vw;
+    height: 8.85vw;
     background-size: 100% auto;
     position: absolute;
-    top: 48%;
+    top: 42%;
     right: 8.5%;
   }
   .vase1 {
     background: url("../images/28.svg");
-    width: 8vw;
-    height: 11.3vw;
+    width: 13vw;
+    height: 18.5vw;
     background-size: 100% auto;
     position: absolute;
-    top: 41%;
+    top: 34.5%;
     left: 38.5%;
   }
   .vase2 {
     background: url("../images/29.svg");
-    width: 15.5vw;
-    height: 18vw;
+    width: 23vw;
+    height: 26.5vw;
     background-size: 100% auto;
     position: absolute;
-    top: 52.5%;
+    top: 50%;
     right: 23%;
   }
   .vase3 {
     background: url("../images/30.svg");
-    width: 9vw;
-    height: 17.5vw;
+    width: 15vw;
+    height: 29vw;
     background-size: 100% auto;
     position: absolute;
-    top: 55%;
+    top: 45%;
     left: 6%;
   }
   .vase4 {
     background: url("../images/31.svg");
-    width: 20vw;
-    height: 13.7vw;
+    width: 30vw;
+    height: 20.5vw;
     background-size: 100% auto;
     position: absolute;
-    top: 63.5%;
+    top: 60%;
     left: 22%;
   }
   .vase5 {
     background: url("../images/34.svg");
-    width: 11.6vw;
-    height: 14.2vw;
+    width: 19vw;
+    height: 23.3vw;
     background-size: 100% auto;
     position: absolute;
-    top: 62.5%;
+    top: 57%;
     right: 4%;
   }
   .block_a {
@@ -2489,6 +2527,28 @@ h1 {
     display: block;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+  }
+  .lamp_1 {
+    width: 12vw;
+    height: 12vw;
+  }
+  .lamp_2 {
+    width: 12vw;
+    height: 12vw;
+  }
+  .pl1 {
+    width: 23vw;
+    height: 23vw;
+  }
+  .pl2 {
+    width: 25vw;
+    height: 25vw;
+    right: 25%;
+    top: 40%;
+  }
+  .pl3 {
+    width: 35vw;
+    height: 35vw;
   }
   .footer {
     display: none;
@@ -2660,6 +2720,7 @@ h1 {
     left: 70.2%;
   }
 }
+
 .block_m {
   display: none;
 }
@@ -2822,8 +2883,8 @@ h1 {
        100% {right: 0.9%;}
    }
    .number_1 {
-     width: 3.6vw;
-     height: 4.8vw;
+     width: 8vw;
+     height: 11vw;
      position: absolute;
      top: 0;
      background-color: white;
@@ -2843,60 +2904,62 @@ h1 {
    .plants img {
      position: absolute;
    }
-   .p11 {
-     top: 34%;
-     right: 20%;
-     width: 48%;
+   .fl9 {
+     top: 25vw;
+     right: 20vw;
+     width: 30vw;
+     height: 30vw;
    }
-   .p10 {
-     top: 66.5%;
-     right: 0;
-     width: 40%;
+   .fl2 {
+     width: 35vw;
+     height: 30vw;
    }
-   .p9 {
-     right: 27.5%;
-     top: 65%;
-     width: 30%;
+   .fl3 {
+     width: 20vw;
+     height: 15vw;
    }
-   .p8 {
-     right: 2%;
-     top: 27.5%;
-     width: 25%;
+   .fl {
+     top: 20vw;
+     width: 23vw;
+     height: 30vw;
    }
-   .p7 {
-     left: 0;
-     top: 63%;
-     width: 28%;
+   .fl5 {
+     bottom: 0vw;
+     left: 9vw;
+     width: 25vw;
+     height: 38vw;
    }
-   .p6 {
-     right: -1%;
-     top: 53%;
-     width: 28%;
+   .fl7 {
+     bottom: 0vw;
+     left: 0vw;
+     width: 18vw;
+     height: 30vw;
    }
-   .p5 {
-     left: 22%;
-     bottom: 0%;
-     width: 22%;
+   .fl11 {
+     bottom: 5vw;
+     right: 15vw;
+     width: 30vw;
+     height: 30vw;
    }
-   .p4 {
-     right: 18%;
-     top: 5%;
-     width: 45%;
+   .fl10 {
+     bottom: 1vw;
+     right: -2vw;
+     width: 30vw;
+     height: 30vw;
    }
-   .p3 {
-     left: 0%;
-     top: 32%;
-     width: 35%;
+   .fl6 {
+     top: 31vw;
+     width: 20vw;
+     height: 20vw;
    }
-   .p2 {
-     right: 5%;
-     top: -0.3%;
-     width: 22%;
+   .fl4 {
+     right: 12vw;
+     width: 30vw;
+     height: 30vw;
    }
-   .p1 {
-     left: 3%;
-     top: 8%;
-     width: 40%;
+   .fl8 {
+     width: 22vw;
+     height: 22vw;
    }
    .right {
      height: 100%;
@@ -3048,8 +3111,8 @@ h1 {
      background-color: #C6C6C6;
    }
    .number_2 {
-     width: 3.6vw;
-     height: 4.8vw;
+     width: 8vw;
+     height: 11vw;
      position: absolute;
      top: 0;
      background-color: white;
@@ -3065,13 +3128,10 @@ h1 {
      position: absolute;
      border-bottom: none;
    }
-   #flower {
-     position: absolute;
-   }
    .plant img {
      position: absolute;
-     left: 15%;
-     top: 0%;
+     left: 0%;
+     top: 3%;
      width: 100%;
    }
    .pattern_black {
@@ -3102,6 +3162,9 @@ h1 {
      top: 27%;
      border-top: 2px solid black;
    }
+   .value_2 {
+     left: -4%;
+   }
    .bottomm {
      display: block;
      width: 100%;
@@ -3128,8 +3191,24 @@ h1 {
      width: 100%;
      border-right: none;
    }
+   .number_5 {
+     width: 8vw;
+     height: 11vw;
+   }
+   .number_3 {
+     width: 8vw;
+     height: 11vw;
+   }
    .number_3 h1 {
-     top: -50%;
+     top: 20%;
+   }
+   .lamp_1 {
+     width: 20vw;
+     height: 20vw;
+   }
+   .lamp_2 {
+     width: 20vw;
+     height: 20vw;
    }
    .list2 {
  	   padding-bottom: 177%;
@@ -3159,6 +3238,18 @@ h1 {
      top: 0%;
      height: 100%;
      border-top: 2px solid black;
+   }
+   .number_4 {
+     width: 8vw;
+     height: 11vw;
+   }
+   .number_6 {
+     width: 8vw;
+     height: 11vw;
+   }
+   .number_7 {
+     width: 8vw;
+     height: 11vw;
    }
    .block_a {
      display: block;
@@ -3210,6 +3301,21 @@ h1 {
      position: relative;
      display: inline-block;
    }
+   .pl1 {
+     width: 25vw;
+     height: 25vw;
+   }
+   .pl2 {
+     width: 30vw;
+     height: 30vw;
+     right: 25%;
+     top: 35%;
+   }
+   .pl3 {
+     width: 35vw;
+     height: 40vw;
+     top: 0%;
+   }
    .rec_m {
      width: 20%;
      height: 100%;
@@ -3233,7 +3339,7 @@ h1 {
      width: 100%;
      height: 31%;
      position: absolute;
-     top: 115%;;
+     top: 114.5%;;
      background-color: #C6C6C6;
      border-top: 2px solid black;
    }
