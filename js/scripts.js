@@ -117,8 +117,27 @@ $(document).ready(function () {
       fillForm();
     });
 });
+$(document).ready(function () {
+    var textArray = [];
+    textArray[0] = '150мл / 20°С';
+    textArray[1] = '200мл / 23°С';
+    textArray[2] = '100мл / 18°С';
+    textArray[3] = '330мл / 23°С';
+    var imgArray=[];
+    imgArray[0] = 'images/22.svg';
+    imgArray[1] = 'images/Group 23.svg';
+    imgArray[2] = 'images/100.svg';
+    imgArray[3] = 'images/Group 22.svg';
+    $("#flower3").attr("src", imgArray[0]);
+    var idx = 0;
+    $('#b3').on('click', function(){
+        idx++;
+        var newidx = idx % textArray.length;
+        $('#v3').text(textArray[newidx]);
+        $ ("#flower3").attr("src", imgArray[newidx]);
+    });
 
-
+});
 
   $(document).ready(function () {
     $('.green_p').hide();
